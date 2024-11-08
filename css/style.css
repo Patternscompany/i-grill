@@ -931,3 +931,8 @@
 .service-description{
     font-size: 1.2rem;
 }
+.duct-area-safety-container{
+    background-image: url('/img/duct-area-safety-net.jpg');
+    background-size: cover;
+    background-position: center;
+}
