@@ -920,3 +920,8 @@
     background-color: green;
     border-radius: 50%;
 }
+.balcony-net-container{
+    background-image: url('/img/balcony-net-banner.png');
+    background-size: cover;
+    background-position: center;
+}
