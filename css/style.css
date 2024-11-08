@@ -866,7 +866,7 @@
 
 .footer .footer-item a {
     line-height: 35px;
-    color: var(--bs-body);
+    color: #fff;
     transition: 0.5s;
 }
 
@@ -877,6 +877,11 @@
 .footer .footer-item a:hover {
     letter-spacing: 1px;
     color: var(--bs-primary);
+}
+
+.footer .footer-item a:hover i {
+    letter-spacing: 1px;
+    color: #000;
 }
 
 .footer .footer-item .footer-btn a,
