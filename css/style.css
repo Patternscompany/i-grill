@@ -925,3 +925,9 @@
     background-size: cover;
     background-position: center;
 }
+.service-title{
+    font-size: 3rem;
+}
+.service-description{
+    font-size: 1.2rem;
+}
