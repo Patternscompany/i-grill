@@ -303,6 +303,7 @@
         background-color: #ffffff;
         opacity: 0.2;
         z-index: -1;
+        filter: blur(5px);
     }
 </style>
     <!-- About Start -->
@@ -397,7 +398,8 @@
     <!-- Fact Counter -->
 
     <!-- Service Start -->
-    <div class="container-fluid service bg-light overflow-hidden py-5">
+    <div class="container-fluid service  overflow-hidden py-5">
+        <div class="service-overlay"></div>
         <div class="container py-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                 <h4 class="text-uppercase text-primary">Our Service</h4>
@@ -405,11 +407,11 @@
             </div>
             <div class="row gx-0 gy-4 align-items-center">
                 <div class="col-lg-6 col-xl-4 wow fadeInLeft" data-wow-delay="0.2s">
-                    <div class="service-item rounded p-4 mb-4">
+                    <div class="service-item bg-light rounded p-4 mb-4">
                         <div class="row">
-                            <div class="col-12">
-                                <div class="d-flex">
-                                    <div class="service-content text-start">
+                            <div class="col-12 ">
+                                <div class="d-flex ">
+                                    <div class="service-content  text-start">
                                         <a href="#" class="h4 d-inline-block mb-3">Balcony Nets</a>
                                         <p class="mb-0">
                                             Balcony nets provide safety, prevent falls, and keep spaces secure.
@@ -422,7 +424,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="service-item rounded p-4 mb-4">
+                    <div class="service-item bg-light rounded p-4 mb-4">
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-flex">
@@ -439,7 +441,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="service-item rounded p-4 mb-0">
+                    <div class="service-item bg-light rounded p-4 mb-0">
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-flex">
@@ -459,7 +461,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-4 wow fadeInLeft" data-wow-delay="0.2s">
-                    <div class="service-item rounded p-4 mb-4">
+                    <div class="service-item bg-light rounded p-4 mb-4">
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-flex">
@@ -477,7 +479,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="service-item rounded p-4 mb-4">
+                    <div class="service-item bg-light rounded p-4 mb-4">
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-flex">
@@ -495,7 +497,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="service-item rounded p-4 mb-0">
+                    <div class="service-item bg-light rounded p-4 mb-0">
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-flex">
@@ -519,7 +521,7 @@
                         </div>
                     </div> -->
                 <div class="col-lg-6 col-xl-4 wow fadeInRight" data-wow-delay="0.2s">
-                    <div class="service-item rounded p-4 mb-4">
+                    <div class="service-item bg-light rounded p-4 mb-4">
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-flex">
@@ -536,7 +538,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="service-item rounded p-4 mb-4">
+                    <div class="service-item bg-light rounded p-4 mb-4">
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-flex">
@@ -553,7 +555,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="service-item rounded p-4 mb-0">
+                    <div class="service-item bg-light rounded p-4 mb-0">
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-flex">
@@ -576,6 +578,25 @@
     </div>
     <!-- Service End -->
 
+    <style>
+        .service{
+            position: relative;
+        
+        }
+        .service-overlay{
+            position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+            background: linear-gradient(45deg, transparent 49%, #4f46e4 49% 51%, transparent 51%) , linear-gradient(-45deg, transparent 49%, #4f46e4 49% 51%, transparent 51%);
+        background-size: 3em 3em;
+        background-color: #ffffff;
+        opacity: 0.3;
+        z-index: -1;
+        filter: blur(2px);
+        }
+    </style>
 
     <!-- Products Start -->
     <!-- <div class="container-fluid product py-5">
