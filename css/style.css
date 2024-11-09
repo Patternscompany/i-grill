@@ -942,3 +942,13 @@
     background-size: cover;
     background-position: center;
 }
+.building-safety-net-container{
+    background-image: url('/img/building-safety-nets-banner.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.ceiling-cloth-hangers-container{
+    background-image: url('/img/ceiling-cloth-hanger-banner.jpg');
+    background-size: cover;
+    background-position: center;
+}
