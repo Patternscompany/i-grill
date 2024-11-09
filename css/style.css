@@ -192,7 +192,7 @@
         border-left: 0;
         border-style: dotted;
         z-index: 999;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: var(--bs-primary);
     }
     
     .sticky-top.navbar-light {
