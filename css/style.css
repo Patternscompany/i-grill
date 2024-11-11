@@ -102,6 +102,10 @@
     padding: 20px 0;
     color: var(--bs-dark);
 }
+.sticky-top.navbar-light .navbar-nav .nav-link:hover,
+.sticky-top.navbar-light .navbar-nav .nav-link.active{
+color: var(--bs-primary);
+}
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
