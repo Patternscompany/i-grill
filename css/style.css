@@ -928,6 +928,7 @@
 }
 .service-title{
     font-size: 3rem;
+    margin-bottom: 1rem;
 }
 .service-description{
     font-size: 1.2rem;
@@ -938,7 +939,7 @@
     background-position: center;
 }
 .pigeon-net-container{
-    background-image: url('/img/pigeon-net-for-balcony-banner.webp');
+    background-image: url('/img/invisible-grill/invisible-grill.webp');
     background-size: cover;
     background-position: center;
 }
@@ -951,4 +952,53 @@
     background-image: url('/img/ceiling-cloth-hanger-banner.jpg');
     background-size: cover;
     background-position: center;
+}
+.service-container img{
+    height: 460px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+@media (max-width: 992px) {
+    .service-container img{
+        height: 300px;
+    }
+}
+
+/*Accordion*/
+.accordion {
+    margin: 20px auto;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ccc;
+}
+
+.accordion-header {
+    width: 100%;
+    background-color: #666;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.accordion-content {
+    overflow: hidden;
+    max-height: 0;
+    padding: 0 10px;
+    background-color: #f9f9f9;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-content p {
+    margin: 10px 0;
+}
+
+.accordion-content.show {
+    max-height: 200px; /* Set a height larger than the content */
+    padding: 10px;
 }
