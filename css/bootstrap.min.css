@@ -47,9 +47,16 @@
     scroll-behavior: smooth;
   }
 }
+@font-face {
+  font-family: 'Queensides';
+  src: url('/fonts/Queensides-3z7Ey.woff') format('woff2');
+
+}
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
+  font-size: calc(1.375rem + 1.5vw);
+  font-family: 'Queensides' !important;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -82,7 +89,7 @@ h1,
 .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
   font-weight: 500;
   line-height: 1.2;
   color: #001442;
@@ -90,6 +97,7 @@ h1,
 h1,
 .h1 {
   font-size: calc(1.375rem + 1.5vw);
+  font-family: 'Queensides' !important;
 }
 @media (min-width: 1200px) {
   h1,
