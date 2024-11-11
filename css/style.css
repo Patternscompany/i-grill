@@ -105,7 +105,7 @@
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--bs-primary);
+    color: var(--bs-white);
 }
 
 .navbar-light .navbar-brand img {
@@ -208,7 +208,7 @@
         height: 2px;
         bottom: -1px;
         left: 50%;
-        background: var(--bs-primary);
+        background: var(--bs-white);
         transition: .5s;
     }
 
@@ -223,7 +223,7 @@
         left: 50%;
         transform: translateX(-50%);
         border: 10px solid;
-        border-color: transparent transparent var(--bs-primary) transparent;
+        border-color: transparent transparent var(--bs-white) transparent;
         opacity: 0;
         transition: 0.5s;
     }
