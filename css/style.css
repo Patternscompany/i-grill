@@ -497,6 +497,9 @@ color: var(--bs-primary);
 .about .about-img img{
     height: 400px;
 }
+.install img{
+    height: 500px;
+}
 
 .about .about-img::before {
     content: "";
