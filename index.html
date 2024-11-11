@@ -106,7 +106,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                         <div class="dropdown-menu m-0">
                             <a href="invisible-grill.html" class="dropdown-item">Invisible Grill</a>
-                            <a href="pleated-mosquito-net .html" class="dropdown-item">Pleated Mosquito Nets</a>
+                            <a href="pleated-mosquito-net.html" class="dropdown-item">Pleated Mosquito Nets</a>
                             <!-- <a href="balcony-nets.html" class="dropdown-item">Balcony Nets</a>
                             <a href="duct-area-safety-nets.html" class="dropdown-item">Duct Area Safety Nets</a>
                             <a href="pigeon-nets-for-balcony.html" class="dropdown-item">Pigeon Nets for Balcony</a>
@@ -261,6 +261,16 @@
                 transform: translateX(-5px);
                 transition: transform 0.3s ease-in-out;
             }
+            .button > svg{
+                stroke:white;
+              
+            }
+            .button svg path{
+                fill: white;
+            }
+            .button svg circle{
+                stroke: white;
+            }
             .button:hover i {
                 transform: translateX(3px);
 
@@ -326,8 +336,8 @@
 
 
                             <button class="button">
-                                <span>Read More</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 74 74" height="34"
+                                <span class="mx-2">Read More</span>
+                                <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 74 74" height="34"
                                     width="34">
                                     <circle stroke-width="3" stroke="black" r="35.5" cy="37" cx="37"></circle>
                                     <path fill="black"
@@ -496,7 +506,7 @@
         <div class="service-overlay"></div>
         <div class="container py-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="text-uppercase text-primary">Our Service</h4>
+                <h4 class="text-uppercase text-primary">Our Products</h4>
                 <h1 class="display-3 text-capitalize mb-3">Ensure Your Family's Safety with the Best Grills</h1>
             </div>
             <div class="row gx-0 gy-4 align-items-center justify-content-center">
@@ -511,7 +521,8 @@
                                         <p class="mb-0">
                                             Balcony nets provide safety, prevent falls, and keep spaces secure.
                                         </p>
-                                    </div>
+                                        <a href="invisible-grill.html" class="read-more">Read More <i class="fa fa-angle-right"></i> </a>
+                                    </div> 
 
                         </div>
                     </div>
@@ -528,7 +539,7 @@
                                         <p class="mb-0">
                                             Balcony nets provide safety, prevent falls, and keep spaces secure.
                                         </p>
-                            
+                                        <a href="pleated-mosquito-net.html" class="read-more">Read More <i class="fa fa-angle-right"></i> </a>
                             </div>
                         </div>
                     </div>
