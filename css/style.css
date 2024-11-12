@@ -734,7 +734,9 @@ height: 30px;
     position: relative;
     z-index: 2;
 }
-
+.team .team-item .team-inner .team-img img{
+    height: 350px;
+}
 .team .team-item .team-inner .team-img::after {
     content: "";
     width: 100%;
