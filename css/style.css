@@ -500,7 +500,9 @@ color: var(--bs-primary);
 .install img{
     height: 500px;
 }
-
+.icon-arrow svg{
+height: 30px;
+}
 .about .about-img::before {
     content: "";
     position: absolute;
