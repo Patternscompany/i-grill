@@ -966,6 +966,11 @@ height: 30px;
     background-size: cover;
     background-position: center;
 }
+.mosquito-net-container{
+    background-image: url('/img/mosquito-nets/pleated-mosquito-net-banner.webp');
+    background-size: cover;
+    background-position: center;
+}
 .building-safety-net-container{
     background-image: url('/img/building-safety-nets-banner.jpg');
     background-size: cover;
