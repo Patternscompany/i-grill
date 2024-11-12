@@ -455,8 +455,8 @@ color: var(--bs-primary);
     transition: 0.5s;
 }
 
-.feature .feature-item:hover {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+.feature .feature-item {
+    box-shadow: 0 0 10px #7c8aab;
 }
 
 .feature .feature-item .feature-icon {
@@ -503,7 +503,7 @@ color: var(--bs-primary);
 .icon-arrow svg{
 height: 30px;
 }
-.about .about-img::before {
+/* .about .about-img::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -524,7 +524,7 @@ height: 30px;
     bottom: 30px;
     border-radius: 10px;
     background: var(--bs-secondary);
-}
+} */
 
 .about .about-img .about-exp {
     position: absolute;

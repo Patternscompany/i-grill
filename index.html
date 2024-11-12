@@ -223,7 +223,7 @@
             </div>
         </div>
         <!-- Carousel End -->
-       
+
     </div>
     <!-- Navbar & Hero End -->
 
@@ -316,6 +316,34 @@
     </div>
     <!-- Modal Search End -->
 
+    <style>
+        /* HTML: <div class="ribbon">Your text content</div> */
+        .ribbon {
+            font-size: 28px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .ribbon {
+            --f: .5em;
+            /* control the folded part*/
+            --r: .8em;
+            /* control the ribbon shape */
+
+            position: absolute;
+            top: 20px;
+            left: calc(-1*var(--f));
+            padding-inline: .25em;
+            line-height: 1.8;
+            background: var(--bs-primary);
+            border-bottom: var(--f) solid #0005;
+            border-right: var(--r) solid #0000;
+            clip-path:
+                polygon(0 0, 0 calc(100% - var(--f)), var(--f) 100%,
+                    var(--f) calc(100% - var(--f)), 100% calc(100% - var(--f)),
+                    calc(100% - var(--r)) calc(50% - var(--f)/2), 100% 0);
+        }
+    </style>
 
     <!-- About Start -->
     <div class="container-fluid about overflow-hidden py-5">
@@ -325,7 +353,7 @@
                     <div class="about-img rounded h-100">
                         <img src="img/invisible-grill/invisible-grill-1.jpg" class="img-fluid rounded  w-100"
                             style="object-fit: cover;" alt="">
-                        <div class="about-exp"><span>9 Years Experience</span></div>
+                        <div class="ribbon">9 Years Experience</div>
                     </div>
                 </div>
                 <div class="col-xl-6 wow fadeInRight d-flex align-items-center" data-wow-delay="0.2s">
@@ -391,7 +419,8 @@
                             long-lasting durability and safety. We use only the best components to protect your home
                             without compromising on strength.
                         </p>
-                        <a href="about.html" class="btn text-secondary read-more">Read More <i class="fa fa-angle-right"></i></a>
+                        <a href="about.html" class="btn text-secondary read-more">Read More <i
+                                class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-6 wow fadeInUp" data-wow-delay="0.4s">
@@ -402,7 +431,8 @@
                             Our team of highly skilled professionals ensures a hassle-free installation process, paying
                             attention to every detail to deliver a flawless finish.
                         </p>
-                        <a href="about.html" class="btn text-secondary read-more">Read More <i class="fa fa-angle-right"></i></a>
+                        <a href="about.html" class="btn text-secondary read-more">Read More <i
+                                class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-6 wow fadeInUp" data-wow-delay="0.6s">
@@ -413,7 +443,8 @@
                             Enjoy top-quality products at prices that won’t break the bank. We offer competitive rates
                             without compromising on the excellence of our grills and services
                         </p>
-                        <a href="about.html" class="btn text-secondary read-more">Read More <i class="fa fa-angle-right"></i></a>
+                        <a href="about.html" class="btn text-secondary read-more">Read More <i
+                                class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-6 wow fadeInUp" data-wow-delay="0.8s">
@@ -424,7 +455,8 @@
                             With numerous satisfied customers and successful installations, our reputation speaks for
                             itself. Trust us to deliver the best in invisible grill solutions.
                         </p>
-                        <a href="about.html" class="btn text-secondary read-more">Read More <i class="fa fa-angle-right"></i></a>
+                        <a href="about.html" class="btn text-secondary read-more">Read More <i
+                                class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -529,7 +561,10 @@
                                 <a href="invisible-grill.html" class="h4 d-inline-block mb-3">Invisible
                                     Grill</a>
                                 <p class="mb-0">
-                                    Invisible grills are sleek, high-tensile stainless-steel wires designed to provide safety without obstructing your view. They are durable, corrosion-resistant, and ideal for modern homes, ensuring safety for children and pets while maintaining aesthetics.
+                                    Invisible grills are sleek, high-tensile stainless-steel wires designed to provide
+                                    safety without obstructing your view. They are durable, corrosion-resistant, and
+                                    ideal for modern homes, ensuring safety for children and pets while maintaining
+                                    aesthetics.
                                 </p>
                                 <a href="invisible-grill.html" class="read-more">Read More <i
                                         class="fa fa-angle-right"></i> </a>
@@ -548,7 +583,9 @@
                                 <a href="pleated-mosquito-net .html" class="h4 d-inline-block mb-3">Pleated
                                     Mosquito Nets</a>
                                 <p class="mb-3">
-                                    Pleated mosquito nets are stylish and space-saving insect screens designed for modern homes. They offer effective protection against mosquitoes and other insects while seamlessly blending with your interiors.
+                                    Pleated mosquito nets are stylish and space-saving insect screens designed for
+                                    modern homes. They offer effective protection against mosquitoes and other insects
+                                    while seamlessly blending with your interiors.
                                 </p>
                                 <a href="pleated-mosquito-net.html" class="read-more">Read More <i
                                         class="fa fa-angle-right"></i> </a>
@@ -854,65 +891,72 @@
     <!-- About End -->
 
 
-        <!-- Blog Start -->
-        <div class="container-fluid blog py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-uppercase text-primary">Our Blog</h4>
-                    <h1 class="display-3 text-capitalize mb-3">Latest Blog & News</h1>
+    <!-- Blog Start -->
+    <div class="container-fluid blog py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-uppercase text-primary">Our Blog</h4>
+                <h1 class="display-3 text-capitalize mb-3">Latest Blog & News</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/invisible-grill/invisible-grill-1.jpg" class="img-fluid rounded-top w-100"
+                                alt="">
+                            <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> Jan 12 2025</div>
+                        </div>
+                        <div class="blog-content rounded-bottom p-4">
+                            <a href="#" class="h4 d-inline-block mb-3">Top Invisible Grills in Guntur</a>
+                            <p>Are you looking for a modern and unobtrusive way to enhance safety while maintaining
+                                beautiful views in your home or office?</p>
+                            <a href="#" class="fw-bold text-secondary">Read More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <img src="img/invisible-grill/invisible-grill-1.jpg" class="img-fluid rounded-top w-100" alt="">
-                                <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> Jan 12 2025</div>
-                            </div>
-                            <div class="blog-content rounded-bottom p-4">
-                                <a href="#" class="h4 d-inline-block mb-3">Top Invisible Grills in Guntur</a>
-                                <p>Are you looking for a modern and unobtrusive way to enhance safety while maintaining beautiful views in your home or office?</p>
-                                <a href="#" class="fw-bold text-secondary">Read More <i class="fa fa-angle-right"></i></a>
-                            </div>
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/invisible-grill/invisible-grill-3.jpg" class="img-fluid rounded-top w-100"
+                                alt="">
+                            <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> Jan 12 2025</div>
+                        </div>
+                        <div class="blog-content rounded-bottom p-4">
+                            <a href="#" class="h4 d-inline-block mb-3">Top Invisible Grills in Vijayawada</a>
+                            <p>Explore premium invisible grills for balconies and windows in Vijayawada, ensuring safety
+                                and elegance for your space.</p>
+                            <a href="#" class="fw-bold text-secondary">Read More <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <img src="img/invisible-grill/invisible-grill-3.jpg" class="img-fluid rounded-top w-100" alt="">
-                                <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> Jan 12 2025</div>
-                            </div>
-                            <div class="blog-content rounded-bottom p-4">
-                                <a href="#" class="h4 d-inline-block mb-3">Top Invisible Grills in Vijayawada</a>
-                                <p>Explore premium invisible grills for balconies and windows in Vijayawada, ensuring safety and elegance for your space.</p>
-                                <a href="#" class="fw-bold text-secondary">Read More <i class="fa fa-angle-right"></i></a>
-                            </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/invisible-grill/invisible-grill-2.jpg" class="img-fluid rounded-top w-100"
+                                alt="">
+                            <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> Jan 12 2025</div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <img src="img/invisible-grill/invisible-grill-2.jpg" class="img-fluid rounded-top w-100" alt="">
-                                <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> Jan 12 2025</div>
-                            </div>
-                            <div class="blog-content rounded-bottom p-4">
-                                <a href="#" class="h4 d-inline-block mb-3">Invisible Grills in Andhra Pradesh</a>
-                                <p>Discover the perfect blend of safety and aesthetics with invisible grills for balconies in Andhra Pradesh’s major cities like Vijayawada, Guntur, Tirupati, and more. Contact us Today.!</p>
-                                <a href="#" class="fw-bold text-secondary">Read More <i class="fa fa-angle-right"></i></a>
-                            </div>
+                        <div class="blog-content rounded-bottom p-4">
+                            <a href="#" class="h4 d-inline-block mb-3">Invisible Grills in Andhra Pradesh</a>
+                            <p>Discover the perfect blend of safety and aesthetics with invisible grills for balconies
+                                in Andhra Pradesh’s major cities like Vijayawada, Guntur, Tirupati, and more. Contact us
+                                Today.!</p>
+                            <a href="#" class="fw-bold text-secondary">Read More <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Blog End -->
+    </div>
+    <!-- Blog End -->
 
 
 
-<style>
-    .blog .blog-img img{
-height: 300px;
-    }
-</style>
+    <style>
+        .blog .blog-img img {
+            height: 300px;
+        }
+    </style>
 
 
     <!-- Testimonial Start -->
@@ -1465,10 +1509,10 @@ height: 300px;
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item d-flex flex-column">
                         <h4 class="text-white mb-4">Popular Links</h4>
-                        <a href="invisible-grill.html"><i class="fas fa-angle-right me-2"></i> 
+                        <a href="invisible-grill.html"><i class="fas fa-angle-right me-2"></i>
                             Invisible Grill
                         </a>
-                        <a href="pleated-mosquito-net.html"><i class="fas fa-angle-right me-2"></i> 
+                        <a href="pleated-mosquito-net.html"><i class="fas fa-angle-right me-2"></i>
                             Pleated Mosquito Nets
                         </a>
                     </div>
