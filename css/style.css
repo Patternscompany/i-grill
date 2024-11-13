@@ -440,15 +440,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   background: var(--bs-white);
   border-radius: 10px;
   transition: 0.5s;
 }
 
-.feature .feature-item {
+/* .feature .feature-item {
   box-shadow: 0 0 10px #7c8aab;
-}
+} */
 
 .feature .feature-item .feature-icon {
   width: 100px;
