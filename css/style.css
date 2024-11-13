@@ -411,7 +411,7 @@
 .bg-breadcrumb {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(rgba(0, 20, 66, 0.7), rgba(0, 20, 66, 0.7)),
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(7, 8, 9, 0.7)),
     url(../img/invisible-grill/invisibel-gril-gal-2.jpg);
   background-position: center top;
   background-repeat: no-repeat;
