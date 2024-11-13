@@ -80,7 +80,7 @@
 }
 
 .btn.btn-secondary:hover {
-  background: var(--bs-primary);
+  background: #fff;
   border: 1px solid var(--bs-primary);
 }
 /*** Topbar Start ***/
@@ -200,7 +200,7 @@
 
   .sticky-top.navbar-light {
     position: fixed;
-    background: var(--bs-light);
+    background: #fff;
     border: none;
   }
 
@@ -246,6 +246,9 @@
   .navbar-light .navbar-nav .nav-link.nav-contact::before {
     display: none;
   }
+}
+.sticky-top a h1{
+  color: #000 !important;
 }
 /*** Carousel Hero Header Start ***/
 .carousel-header {
@@ -607,8 +610,7 @@
 .counter {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(rgba(25, 64, 154, 0.9), rgba(25, 64, 154, 1)),
-    url(../img/fact-bg.jpg);
+  background: linear-gradient(rgb(0 0 0 / 90%), rgb(94 100 115)), url(../img/fact-bg.jpg);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -872,7 +874,7 @@
 
 /*** Footer Start ***/
 .footer {
-  background: var(--bs-dark);
+  background: var(--bs-primary);
 }
 
 .footer .footer-item a {
@@ -887,7 +889,7 @@
 
 .footer .footer-item a:hover {
   letter-spacing: 1px;
-  color: var(--bs-primary);
+  color: #fff;
 }
 
 .footer .footer-item a:hover i {
@@ -911,8 +913,8 @@
 
 /*** copyright Start ***/
 .copyright {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  background: var(--bs-dark);
+  border-top: 1px solid #fff;
+  background: #000;
 }
 /*** copyright end ***/
 
@@ -1032,7 +1034,7 @@ width: 100%;
     right: -1%;
 }
 .gallery .owl-nav .owl-prev, .gallery .owl-nav .owl-next{
-background-color: blue;
+background-color: #000000;
 padding: 5px 10px;
 border-radius: 30%;
 color: white;
