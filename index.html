@@ -231,7 +231,69 @@
     </div>
     <!-- Navbar & Hero End -->
 
+
+<script>
+    const carousel = document.querySelector('#carouselId');
+let isDragging = false;
+let startPos = 0;
+let currentTranslate = 0;
+let prevTranslate = 0;
+let animationID;
+
+carousel.addEventListener('mousedown', startDrag);
+carousel.addEventListener('mouseup', endDrag);
+carousel.addEventListener('mouseleave', endDrag);
+carousel.addEventListener('mousemove', drag);
+
+carousel.addEventListener('touchstart', startDrag);
+carousel.addEventListener('touchend', endDrag);
+carousel.addEventListener('touchmove', drag);
+
+function startDrag(event) {
+    isDragging = true;
+    startPos = getPositionX(event);
+    animationID = requestAnimationFrame(animation);
+}
+
+function endDrag() {
+    isDragging = false;
+    cancelAnimationFrame(animationID);
+    const movedBy = currentTranslate - prevTranslate;
+
+    if (movedBy < -100) {
+        $('#carouselId').carousel('next');
+    } else if (movedBy > 100) {
+        $('#carouselId').carousel('prev');
+    }
+    setPositionByIndex();
+}
+
+function drag(event) {
+    if (isDragging) {
+        const currentPosition = getPositionX(event);
+        currentTranslate = prevTranslate + currentPosition - startPos;
+    }
+}
+
+function getPositionX(event) {
+    return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+}
+
+function animation() {
+    if (isDragging) requestAnimationFrame(animation);
+}
+
+function setPositionByIndex() {
+    prevTranslate = 0;
+    currentTranslate = 0;
+}
+</script>
+
+
     <style>
+        .carousel-item{
+            cursor: pointer;
+        }
         .carousel-item .img-fluid {
             height: 100vh !important;
         }
