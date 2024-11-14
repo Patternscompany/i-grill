@@ -745,7 +745,7 @@
 .team .team-item .team-inner .team-img img {
   height: 350px;
 }
-.team .team-item .team-inner .team-img::after {
+/* .team .team-item .team-inner .team-img::after {
   content: "";
   width: 100%;
   height: 0;
@@ -761,7 +761,7 @@
 
 .team .team-item:hover .team-inner .team-img::after {
   height: 100%;
-}
+} */
 
 .team .team-item .team-inner .team-img .team-share {
   position: absolute;
