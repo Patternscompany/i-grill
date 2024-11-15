@@ -230,68 +230,69 @@
     <!-- Navbar & Hero End -->
 
 
-<script>
-    const carousel = document.querySelector('#carouselId');
-let isDragging = false;
-let startPos = 0;
-let currentTranslate = 0;
-let prevTranslate = 0;
-let animationID;
+    <script>
+        const carousel = document.querySelector('#carouselId');
+        let isDragging = false;
+        let startPos = 0;
+        let currentTranslate = 0;
+        let prevTranslate = 0;
+        let animationID;
 
-carousel.addEventListener('mousedown', startDrag);
-carousel.addEventListener('mouseup', endDrag);
-carousel.addEventListener('mouseleave', endDrag);
-carousel.addEventListener('mousemove', drag);
+        carousel.addEventListener('mousedown', startDrag);
+        carousel.addEventListener('mouseup', endDrag);
+        carousel.addEventListener('mouseleave', endDrag);
+        carousel.addEventListener('mousemove', drag);
 
-carousel.addEventListener('touchstart', startDrag);
-carousel.addEventListener('touchend', endDrag);
-carousel.addEventListener('touchmove', drag);
+        carousel.addEventListener('touchstart', startDrag);
+        carousel.addEventListener('touchend', endDrag);
+        carousel.addEventListener('touchmove', drag);
 
-function startDrag(event) {
-    isDragging = true;
-    startPos = getPositionX(event);
-    animationID = requestAnimationFrame(animation);
-}
+        function startDrag(event) {
+            isDragging = true;
+            startPos = getPositionX(event);
+            animationID = requestAnimationFrame(animation);
+        }
 
-function endDrag() {
-    isDragging = false;
-    cancelAnimationFrame(animationID);
-    const movedBy = currentTranslate - prevTranslate;
+        function endDrag() {
+            isDragging = false;
+            cancelAnimationFrame(animationID);
+            const movedBy = currentTranslate - prevTranslate;
 
-    if (movedBy < -100) {
-        $('#carouselId').carousel('next');
-    } else if (movedBy > 100) {
-        $('#carouselId').carousel('prev');
-    }
-    setPositionByIndex();
-}
+            if (movedBy < -100) {
+                $('#carouselId').carousel('next');
+            } else if (movedBy > 100) {
+                $('#carouselId').carousel('prev');
+            }
+            setPositionByIndex();
+        }
 
-function drag(event) {
-    if (isDragging) {
-        const currentPosition = getPositionX(event);
-        currentTranslate = prevTranslate + currentPosition - startPos;
-    }
-}
+        function drag(event) {
+            if (isDragging) {
+                const currentPosition = getPositionX(event);
+                currentTranslate = prevTranslate + currentPosition - startPos;
+            }
+        }
 
-function getPositionX(event) {
-    return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
-}
+        function getPositionX(event) {
+            return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+        }
 
-function animation() {
-    if (isDragging) requestAnimationFrame(animation);
-}
+        function animation() {
+            if (isDragging) requestAnimationFrame(animation);
+        }
 
-function setPositionByIndex() {
-    prevTranslate = 0;
-    currentTranslate = 0;
-}
-</script>
+        function setPositionByIndex() {
+            prevTranslate = 0;
+            currentTranslate = 0;
+        }
+    </script>
 
 
     <style>
-        .carousel-item{
+        .carousel-item {
             cursor: pointer;
         }
+
         .carousel-item .img-fluid {
             height: 100vh !important;
         }
@@ -617,7 +618,89 @@ function setPositionByIndex() {
                 <h1 class="display-3 text-capitalize mb-3">Ensure Your Family's Safety with the Best Grills</h1>
             </div>
             <div class="row gx-0 gy-4 align-items-center justify-content-center">
-                <div class="col-lg-5 col-md-5  col-xl-5 wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="img/Invisible-Grill.webp" alt="Invisible Grill" class="image-grill w-100">
+                            <h3>Invisible Grill</h3>
+                        </div>
+                        <div class="card__content">
+                            <p class="card__title">
+                                Invisible Grill
+                            </p>
+                            <p class="card__description">
+                                Invisible grills are strong, stainless-steel wires designed to keep your home safe
+                                without blocking the view. These grills are perfect for modern homes, as they provide
+                                safety while keeping the look of your home open and stylish. Made from high-tensile
+                                stainless steel, they’re built to last, resisting rust and corrosion, even in tough
+                                weather. This makes them an ideal choice for homes in cities or places with changing
+                                weather conditions.
+
+                                The main purpose of invisible grills is to create a barrier that helps protect children,
+                                pets, and even adults from accidental falls, especially when used on balconies or
+                                windows. However, unlike traditional grills, they do not feel heavy or bulky and blend
+                                in well with the design of your home. This gives you the security you need without
+                                making your living space feel closed in.
+
+                                At I Grill, we are committed to quality and customer satisfaction. We only use
+                                high-quality materials, ensuring that every grill is not only strong but also
+                                long-lasting. Each grill goes through strict quality checks to make sure it meets safety
+                                standards and can handle daily wear and tear. We understand that our customers want
+                                products that they can rely on for years, so we take every measure to make our grills as
+                                durable and effective as possible.
+
+                                In short, invisible grills provide a sleek and modern way to protect your family without
+                                interrupting the open, airy feel of your space.
+                            </p>
+                            <a href="invisible-grill.html" class="btn text-secondary read-more">Read More <i
+                                    class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="img/pleated-mosquito-net.webp" alt="Invisible Grill"
+                                class="image-grill w-100 h-100">
+                            <h3 class="text-dark">Pleated Mosquito Nets</h3>
+                        </div>
+                        <div class="card__content">
+                            <p class="card__title">
+                                Pleated Mosquito Nets
+                            </p>
+                            <p class="card__description">
+                                Pleated mosquito nets are an elegant, functional solution for keeping insects out while
+                                allowing fresh air and natural light into your living spaces. Unlike traditional
+                                mosquito nets, pleated nets have a unique, accordion-like design that enables them to
+                                fold and unfold smoothly. When closed, they create a secure barrier against mosquitoes,
+                                flies, and other insects. When not in use, they fold back compactly, providing an
+                                unobstructed view and preserving the open feel of your space. These nets are ideal for
+                                windows, doors, balconies, and other openings, offering protection without compromising
+                                on aesthetics or airflow.
+
+                                One of the main advantages of pleated mosquito nets is their sleek, space-saving design,
+                                which integrates seamlessly with modern interiors and exteriors. Built with
+                                high-quality, durable materials, these nets are designed to withstand regular use,
+                                ensuring they remain effective over time. They are also available in various sizes and
+                                can be customized to fit specific door and window dimensions, making them suitable for
+                                homes, offices, and commercial spaces.
+
+                                At I Grill, we take pride in delivering products that combine functionality, durability,
+                                and style. Our pleated mosquito nets are crafted with precision, ensuring that each net
+                                meets rigorous quality standards. The materials used in our nets are not only resistant
+                                to wear and tear but also weather-resistant, making them suitable for different climates
+                                and conditions. This focus on quality ensures that our mosquito nets remain intact and
+                                effective, even in humid or windy environments, reducing the need for frequent
+                                maintenance.
+                            </p>
+                            <a href="invisible-grill.html" class="btn text-secondary read-more">Read More <i
+                                    class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-5 col-md-5 d-lg-none col-xl-5 wow fadeInLeft" data-wow-delay="0.2s">
                     <div class="service-item  bg-light rounded p-4 mb-4">
 
                         <div class="d-flex ">
@@ -639,7 +722,7 @@ function setPositionByIndex() {
                     </div>
 
                 </div>
-                <div class="col-lg-5 col-md-5  col-xl-5 wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="col-lg-5 col-md-5 d-lg-none col-xl-5 wow fadeInLeft" data-wow-delay="0.2s">
                     <div class="service-item  bg-light rounded p-4 mb-4">
 
                         <div class="d-flex ">
@@ -659,120 +742,6 @@ function setPositionByIndex() {
                     </div>
 
                 </div>
-                <!-- <div class="service-item bg-light rounded p-4 mb-0">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="d-flex">
-                                    <div class="service-content text-start">
-                                        <a href="#" class="h4 d-inline-block mb-3">Pigeon Nets for Balcony</a>
-                                        <p class="mb-0">
-                                            Pigeon nets for balconies prevent bird entry, ensuring cleanliness and
-                                            safety.
-                                        </p>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-
-                <!-- <div class="col-lg-6 col-xl-4 wow fadeInLeft" data-wow-delay="0.2s">
-                    <div class="service-item bg-light rounded p-4 mb-4">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="d-flex">
-                                    <div class="service-content text-center">
-                                        <a href="#" class="h4 d-inline-block mb-3">Anti Pigeon Spikes</a>
-                                        <p class="mb-0">
-                                            Anti-pigeon spikes are sharp deterrents preventing birds from landing
-                                            surfaces.
-                                        </p>
-                                    </div>
-                                
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-item bg-light rounded p-4 mb-4">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="d-flex">
-                                    <div class="service-content text-center">
-                                        <a href="#" class="h4 d-inline-block mb-3">Building Safety Nets</a>
-                                        <p class="mb-0">
-                                            Building safety nets involves creating support systems to protect
-                                            individuals.
-                                        </p>
-                                    </div>
-                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-item bg-light rounded p-4 mb-0">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="d-flex">
-                                    <div class="service-content text-center">
-                                        <a href="#" class="h4 d-inline-block mb-3">Ceiling Cloth Hangers</a>
-                                        <p class="mb-0">
-                                            Space-saving ceiling cloth hangers for drying clothes indoors efficiently.
-                                        </p>
-                                    </div>
-                              
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="col-lg-6 col-xl-4 wow fadeInRight" data-wow-delay="0.2s">
-                    <div class="service-item bg-light rounded p-4 mb-4">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="d-flex">
-                                    <div class="service-content text-end">
-                                        <a href="#" class="h4 d-inline-block mb-3">Window Chajja Nets</a>
-                                        <p class="mb-0">
-                                            Window Chajja nets offer protection from debris, birds, and insects.
-                                        </p>
-                                    </div>
-                                
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-item bg-light rounded p-4 mb-4">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="d-flex">
-                                    <div class="service-content text-end">
-                                        <a href="#" class="h4 d-inline-block mb-3">Open Area Safety Nets</a>
-                                        <p class="mb-0">
-                                            Open area safety nets are protective mesh systems preventing falls.
-                                        </p>
-                                    </div>
-                                 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-item bg-light rounded p-4 mb-0">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="d-flex">
-                                    <div class="service-content text-end">
-                                        <a href="#" class="h4 d-inline-block mb-3">Outdoor AC Net</a>
-                                        <p class="mb-0">
-                                            Outdoor AC Net is a protective mesh covering for air conditioners.
-                                        </p>
-                                    </div>
-                             
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </div>
@@ -803,6 +772,97 @@ function setPositionByIndex() {
             opacity: 0.3;
             z-index: -1;
             filter: blur(2px);
+        }
+
+        /*Card 1*/
+        .card {
+            position: relative;
+            /* width: 300px;
+            height: 200px; */
+            background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+            margin-right: 20px;
+        }
+
+        .card svg {
+            width: 48px;
+            fill: #333;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        .card:hover {
+            transform: rotate(-5deg) scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card__content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #fff;
+            opacity: 0;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        .card:hover .card__content {
+            transform: translate(-50%, -50%) rotate(0deg);
+            opacity: 1;
+        }
+
+        .card:hover .image-container h3 {
+            display: none;
+        }
+
+        .card__title {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .card__description {
+            margin: 10px 0 0;
+            font-size: 14px;
+            color: #777;
+            line-height: 1.4;
+        }
+
+        .card:hover svg {
+            scale: 0;
+            transform: rotate(-45deg);
+        }
+
+        .image-container .image-grill {
+            position: relative;
+            height: 500px !important;
+            object-fit: cover;
+        }
+
+        .image-container h3 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            z-index: 10;
+            color: #fff;
+            font-size: 2rem;
+        }
+
+        .read-more:hover {
+            color: #333;
         }
     </style>
 
@@ -922,7 +982,14 @@ function setPositionByIndex() {
                         <h2 class="display-3 mb-3">
                             Why choose I Grill India Pvt Ltd?</h2>
                         <p class="mb-3">
-                            Choose I Grill India Pvt Ltd for your safety needs because we specialize in high-quality, durable invisible safety grills that enhance both security and aesthetics. Our grills are made with premium materials, such as SS316 Nylon Coated Cable and 6063 Grade Aluminium Channels, providing robust protection while maintaining a clear, unobstructed view of your surroundings. I Grill India Pvt Ltd is committed to precision engineering and seamless installation, making our grills the perfect fit for modern homes and offices. We also pride ourselves on exceptional customer service, ensuring a smooth and satisfying experience from consultation through to installation.
+                            Choose I Grill India Pvt Ltd for your safety needs because we specialize in high-quality,
+                            durable invisible safety grills that enhance both security and aesthetics. Our grills are
+                            made with premium materials, such as SS316 Nylon Coated Cable and 6063 Grade Aluminium
+                            Channels, providing robust protection while maintaining a clear, unobstructed view of your
+                            surroundings. I Grill India Pvt Ltd is committed to precision engineering and seamless
+                            installation, making our grills the perfect fit for modern homes and offices. We also pride
+                            ourselves on exceptional customer service, ensuring a smooth and satisfying experience from
+                            consultation through to installation.
                         </p>
                         <a href="about.html" class=" rounded-pill py-3 px-5">
 
@@ -1065,7 +1132,8 @@ function setPositionByIndex() {
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.3s">
                 <div class="testimonial-item text-center p-4">
                     <p>
-                        I recently installed Balcony Safety Nets from I Grill India Pvt Ltd. The installation process was
+                        I recently installed Balcony Safety Nets from I Grill India Pvt Ltd. The installation process
+                        was
                         smooth, and the durability of the nets gives me confidence in their long-term effectiveness. I
                         highly recommend I Grill India Pvt Ltd for anyone looking to enhance safety without sacrificing
                         style.
@@ -1089,7 +1157,8 @@ function setPositionByIndex() {
                     <p>
                         Our office was constantly dealing with pigeon mess on the balconies. Since we installed the
                         pigeon nets from this company, we've had zero issues. Plus, they were incredibly professional
-                        and quick during installation. The peace of mind it brings is invaluable. Thank you I Grill India Pvt Ltd for your service.
+                        and quick during installation. The peace of mind it brings is invaluable. Thank you I Grill
+                        India Pvt Ltd for your service.
                     </p>
                     <!-- <div class="d-flex justify-content-center mb-4">
                             <img src="img/testimonial-2.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
@@ -1642,8 +1711,11 @@ function setPositionByIndex() {
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item d-flex flex-column">
                         <h4 class="text-white mb-4">Contact Info</h4>
-                        <a href="https://maps.app.goo.gl/BXjRAvtU9wDjiPG66"><i class="fa fa-map-marker-alt me-2"></i> Plot No : 401A,Srinivasa Nilayam, Beside Pizzahutt,Lanco hills Road, Manikonda,Hyderabad-500089.</a>
-                        <a href="mailto:igrillindia@gmail.com"><i class="fas fa-envelope me-2"></i> igrillindia@gmail.com</a>
+                        <a href="https://maps.app.goo.gl/BXjRAvtU9wDjiPG66"><i class="fa fa-map-marker-alt me-2"></i>
+                            Plot No : 401A,Srinivasa Nilayam, Beside Pizzahutt,Lanco hills Road,
+                            Manikonda,Hyderabad-500089.</a>
+                        <a href="mailto:igrillindia@gmail.com"><i class="fas fa-envelope me-2"></i>
+                            igrillindia@gmail.com</a>
                         <!-- <a href="mailto:igrillindia@gmail.com"><i class="fas fa-envelope me-2"></i> igrillindia@gmail.com</a> -->
                         <a href="tel:+919966761117"><i class="fas fa-phone me-2"></i> +919966761117</a>
                         <a href="tel:+919966761117" class="mb-3"><i class="fas fa-print me-2"></i> +919966761117</a>
