@@ -52,6 +52,12 @@
   src: url('/fonts/Queensides-3z7Ey.woff') format('woff2');
 
 }
+@font-face {
+  font-family: 'Chub Gothic'; /* Name of the font */
+  src: url('/fonts/chub-gothic/chubgothic_1.ttf')  format('truetype'); /* Path to the font file */
+  font-weight: normal; /* Font weight (normal, bold, etc.) */
+  font-style: normal;  /* Font style (normal, italic, etc.) */
+}
 body {
   margin: 0;
   /* font-family: "Open Sans", sans-serif; */
@@ -89,7 +95,7 @@ h1,
 .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  /* font-family: "Playfair Display", serif; */
+  font-family: "Chub Gothic", "Playfair Display", serif;
   font-weight: 500;
   line-height: 1.2;
   color: #001442;
@@ -97,7 +103,7 @@ h1,
 h1,
 .h1 {
   font-size: calc(1.375rem + 1.5vw);
-  font-family: 'Queensides' !important;
+  font-family: 'Chub Gothic' !important;
 }
 @media (min-width: 1200px) {
   h1,
