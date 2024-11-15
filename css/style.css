@@ -992,12 +992,12 @@
   background-position: center;
 }
 .pigeon-net-container {
-  background-image: url("/img/invisible-grill/invisible-grill.webp");
+  background-image: url("../img/invisible-grill/invisible-grill.webp");
   background-size: cover;
   background-position: center;
 }
 .mosquito-net-container {
-  background-image: url("/img/mosquito-nets/pleated-mosquito-net-banner.webp");
+  background-image: url("../img/mosquito-nets/pleated-mosquito-net-banner.webp");
   background-size: cover;
   background-position: center;
 }
