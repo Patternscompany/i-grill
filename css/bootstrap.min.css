@@ -54,14 +54,14 @@
 }
 @font-face {
   font-family: 'Chub Gothic'; /* Name of the font */
-  src: url('/fonts/chub-gothic/chubgothic_1.woff')  format('truetype'); /* Path to the font file */
+  src: url('/fonts/chub-gothic/chubgothic_1.woff')  format('woff'); /* Path to the font file */
   font-weight: normal; /* Font weight (normal, bold, etc.) */
   font-style: normal;  /* Font style (normal, italic, etc.) */
 }
-@font-face {
+/* @font-face {
   font-family: 'chubgothic_1';
   src: url('/fonts/chub-gothic/chubgothic_1.woff') format('woff');
-}
+} */
 
 body {
   margin: 0;
