@@ -54,7 +54,7 @@
 }
 @font-face {
   font-family: 'Chub Gothic'; /* Name of the font */
-  src: url('/fonts/chub-gothic/chubgothic_1.woff')  format('woff2'); /* Path to the font file */
+  src: url('/fonts/chub-gothic/chubgothic_1.ttf')  format('truetype'); /* Path to the font file */
 
 }
 
