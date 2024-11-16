@@ -1140,7 +1140,7 @@
 
 .about-item-container img {
   width: 100%; /* Make the image fit the container */
-  height: 500px; /* Make the image fit the container */
+  height: 600px; /* Make the image fit the container */
   object-fit: cover; /* Ensure the image scales properly */
   transition: transform 0.5s ease; /* Adds a smooth transition effect */
 }
