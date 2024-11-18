@@ -333,6 +333,7 @@
             font-size: 28px;
             font-weight: bold;
             color: #fff;
+            z-index: 2;
         }
 
         .ribbon {
@@ -343,6 +344,7 @@
 
             position: absolute;
             top: 20px;
+            /* left:; */
             left: calc(-1*var(--f));
             padding-inline: .25em;
             line-height: 1.8;
@@ -365,19 +367,20 @@
                        
                       
                                 <div class="owl-carousel about-carousel  wow fadeInRight" data-wow-delay="0.3s">
-                                    <div class="testimonial-item text-center p-4">
-                                        <img src="img/mosquito-nets/mosquito-net.jpg" alt="I Grill">
+                                    <div class="testimonial-item text-center ">
+                                        <img src="img/invisible-grill/invisible-grill-1.jpg" alt="I Grill">
                                     </div>
-                                    <div class="testimonial-item text-center p-4">
+                                    <div class="testimonial-item text-center ">
                                         <img src="img/invisible-grill/invisibel-gril-gal-2.jpg" alt="I Grill">
                                     </div>
-                                    <div class="testimonial-item text-center p-4">
+                                    <div class="testimonial-item text-center ">
                                         <img src="img/mosquito-nets/pleated-mosquito-net-gal-2.webp" alt="I Grill" class="img-fluid">
                                     </div>
-                                    <div class="testimonial-item text-center p-4">
+                                    <div class="testimonial-item text-center ">
                                         <img src="img/mosquito-nets/pleated-mosquito-net-gal-4.webp" alt="I Grill" class="img-fluid">
                                     </div>
                                 </div>
+                                <div class="ribbon">9 Years Experience</div>
                            
                     </div>
                 </div>
@@ -421,10 +424,12 @@
     .about .about-carousel  .owl-nav{
     display: none;
     }
-   
+    .about .about-carousel img{
+        border-radius: 1rem;
+    }
 </style>
 
-    <div class="container-fluid about overflow-hidden py-5">
+    <!-- <div class="container-fluid about overflow-hidden py-5">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
@@ -468,7 +473,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- About End -->
 
 
