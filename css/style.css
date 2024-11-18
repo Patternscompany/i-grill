@@ -28,6 +28,12 @@
   color: #fff;
 }
 
+@media (max-width:992px){
+  .back-to-top{
+    bottom: 70px;
+  }
+}
+
 /*** Button Start ***/
 .btn {
   font-weight: 600;
@@ -1003,6 +1009,28 @@ border-bottom: 2px solid #fff;
   background-color: #000;
 }
 
+.social-icons-container{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: #000;
+  z-index: 999;
+}
+
+.social-icons-container .social-icons{
+  display: flex;
+}
+
+.social-icons-container .social-icon{
+  width: 33.3333%;
+  border-right: 1px solid #fff;
+  text-align: center;
+}
+.social-icon a i{
+  font-size: 2.5rem;
+  padding: 10px;
+  color: #fff;
+}
 .balcony-net-container {
   background-image: url("/img/balcony-net-banner.png");
   background-size: cover;
