@@ -532,7 +532,7 @@
   margin-left: 30px;
 }
 .about .about-img img {
-  height: 550px;
+  height: 480px;
 }
 .install img {
   height: 500px;
@@ -1271,4 +1271,8 @@ border-bottom: 2px solid #fff;
   font-size: 14px;
   color: #777;
   line-height: 1.4;
+}
+
+.footer-item p{
+  color: #fff;
 }
