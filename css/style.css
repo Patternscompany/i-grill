@@ -128,12 +128,12 @@
 }
 }
 .navbar-light .navbar-brand img {
-  max-height: 60px;
+  max-height: 100px;
   transition: 0.5s;
 }
 
 .sticky-top.navbar-light .navbar-brand img {
-  max-height: 45px;
+  max-height: 100px;
 }
 
 .navbar .dropdown-toggle::after {
@@ -189,8 +189,8 @@
     color: var(--bs-dark);
   }
 
-  .navbar-light .navbar-brand img {
-    max-height: 45px;
+  .navbar-light .navbar-brand img, .sticky-top.navbar-light .navbar-brand img {
+    max-height: 70px;
   }
   .sticky-top.navbar-light .navbar-nav .nav-link:hover,
   .sticky-top.navbar-light .navbar-nav .nav-link.active {
@@ -222,17 +222,22 @@
     border-left: 0;
     border-style: dotted;
     z-index: 999;
-    /* background-color: var(--bs-primary); */
-    background: linear-gradient(to left, #000, rgb(18, 18, 73));
+    background-color: #003674;
+    /* background: linear-gradient(to left, #000, rgb(18, 18, 73)); */
   }
 
   .sticky-top.navbar-light {
     position: fixed;
     /* background: #fff; */
-    background: linear-gradient(to left, #000, rgb(18, 18, 73));
-
+    /* background: linear-gradient(to left, #000, rgb(18, 18, 73)); */
+    background-color: #003674;
     border: none;
   }
+/* 
+  .navbar a img{
+    width: 150px;
+    height: 260px !important;
+  } */
 
   .navbar-light .navbar-nav .nav-item::before {
     position: absolute;
@@ -487,6 +492,7 @@
 .feature .feature-item {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   background: var(--bs-white);
   border-radius: 10px;
@@ -532,7 +538,8 @@
   margin-left: 30px;
 }
 .about .about-img img {
-  height: 480px;
+  height: 520px;
+  object-fit: cover;
 }
 .install img {
   height: 500px;
