@@ -155,7 +155,7 @@
                         <div class="carousel-caption-1">
                             <div class="carousel-caption-1-content" style="max-width: 900px;">
                                 <!-- <h4 class="text-white text-uppercase fw-bold mb-4 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;" style="letter-spacing: 3px;">Importance life</h4> -->
-                                <h1 class="display-2 text-capitalize text-white mb-4 fadeInLeft animated"
+                                <h1 class="display-4 text-capitalize text-white mb-4 fadeInLeft animated"
                                     data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;">
                                     Transform your Home with Invisible Grills</h1>
                                 <!-- <p class="mb-5 fs-5 text-white fadeInLeft animated" data-animation="fadeInLeft" data-delay="1.5s" style="animation-delay: 1.5s;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -186,7 +186,7 @@
                         <div class="carousel-caption-2">
                             <div class="carousel-caption-2-content" style="max-width: 900px;">
                                 <!-- <h4 class="text-white text-uppercase fw-bold mb-4 fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;" style="letter-spacing: 3px;">Importance life</h4> -->
-                                <h1 class="display-2 text-capitalize text-white mb-4 fadeInRight animated"
+                                <h1 class="display-4 text-capitalize text-white mb-4 fadeInRight animated"
                                     data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
                                     Enhancing Balcony Safety with Invisible Grills</h1>
 
@@ -229,6 +229,27 @@
     </div>
     <!-- Navbar & Hero End -->
 
+    <style>
+        .hero-section {
+          position: relative;
+          height: 100vh;
+          color: white;
+        }
+        .carousel-item img {
+          object-fit: cover;
+          height: 100vh;
+        }
+        .carousel-caption {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          text-align: center;
+        }
+        .btn-primary {
+          background-color: #007bff;
+          border-color: #007bff;
+        }
+      </style>
 
 
 
@@ -500,13 +521,28 @@
                             <p class="mb-0"><strong>Professional Installation:</strong> Expert technicians ensuring secure and precise fittings.</p>
                         </div>
                     </div>
-                    <a href="about.html" class="btn btn-primary rounded-pill py-3 px-5">
+                    <a href="about.html" class="btn rounded-pill py-3 px-5">
                         <span class="me-2">Read More</span>
                         <i class="fa fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
         </div>
+
+        <style>
+            .about-item a{
+                background-color: #fff;
+                color: #000;
+                border: 1px solid #000;
+                border-radius: 10px;
+            }
+            .about-item a:hover{
+                background-color: #000;
+                color: #fff;
+                border: 1px solid #fff;
+                border-radius: 10px;
+            }
+        </style>
 
         <!-- Features Section -->
         <div class="row g-5 mt-5">
@@ -643,7 +679,7 @@
             <div class="row align-items-center">
                 <!-- Left Column: Content -->
                 <div class="col-md-6 mb-4 mb-md-0">
-                    <h2 class="mb-3 text-primary">
+                    <h2 class="invisible-grill mb-3 text-primary">
                         Invisible Grills
                     </h2>
                     <p class="mb-4">
@@ -681,6 +717,38 @@
             </div>
         </div>
     </div>
+
+    <style>
+        .invisible-grill{
+            position: relative;
+      font-size: 3rem;
+      color: #333;
+      overflow: hidden;
+      display: inline-block;
+        }
+        .invisible-grill::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: -100%;
+            width: 100%;
+            height: 4px;
+            background-color: #FEE400;
+            animation: moveUnderline 4s linear infinite;
+          }
+      
+          @keyframes moveUnderline {
+            0% {
+              left: -100%;
+            }
+            50% {
+              left: 100%;
+            }
+            100% {
+              left: -100%;
+            }
+          }
+    </style>
 
     <div class="container-fluid py-5 ">
         <div class="container">
@@ -776,70 +844,64 @@
         </div>
     </div>
 
-    <!-- feature Start -->
-    <div class="container-fluid feature wel py-5">
-        <div class="welcome"></div>
-        <div class="container py-5">
-            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="fs-2 text-uppercase text-primary">Welcome to I Grill India Private Limited</h4>
-                <p class="fs-6 text-capitalize mb-3">
-                    At I Grill India Private Limited, we offer invisible grills that provide both safety and a modern look. Ideal for balconies, windows, and open spaces, these grills keep you secure while giving you clear, open views. Made from strong, rust-proof materials, they are durable and protect your home without affecting its style.
-                </p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-6 col-xl-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="feature-item p-4">
-                        <div class="feature-icon mb-3"><i class="fas fa-hand-holding-water text-white fa-3x"></i></div>
-                        <h3 class="h4 mb-3">Trusted Quality</h3>
-                        <p class="mb-3">
-                            Our invisible grills are made from high-quality, corrosion-resistant materials, ensuring
-                            long-lasting durability and safety. We use only the best components to protect your home
-                            without compromising on strength.
-                        </p>
-                        <a href="about.html" class="btn text-secondary read-more">Read More <i
-                                class="fa fa-angle-right"></i></a>
+        <!-- Fact Counter -->
+        <div class="container-fluid counter py-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="counter-item">
+                            <div class="counter-item-icon mx-auto">
+                                <i class="fas fa-thumbs-up fa-3x text-white"></i>
+                            </div>
+                            <h4 class="text-white my-4">Happy Clients</h4>
+                            <div class="counter-counting">
+                                <span class="text-white fs-2 fw-bold" data-toggle="counter-up">1142</span>
+                                <span class="h1 fw-bold text-white">+</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-6 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="feature-item p-4">
-                        <div class="feature-icon mb-3"><i class="fas fa-filter text-white fa-3x"></i></div>
-                        <h3 class="h4 mb-3">Expert Installation</h3>
-                        <p class="mb-3">
-                            Our team of highly skilled professionals ensures a hassle-free installation process, paying
-                            attention to every detail to deliver a flawless finish.
-                        </p>
-                        <a href="about.html" class="btn text-secondary read-more">Read More <i
-                                class="fa fa-angle-right"></i></a>
+                    <!-- <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="counter-item">
+                            <div class="counter-item-icon mx-auto">
+                                <i class="fas fa-truck fa-3x text-white"></i>
+                            </div>
+                            <h4 class="text-white my-4">Transport</h4>
+                            <div class="counter-counting">
+                                <span class="text-white fs-2 fw-bold" data-toggle="counter-up">513</span>
+                                <span class="h1 fw-bold text-white">+</span>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="counter-item">
+                            <div class="counter-item-icon mx-auto">
+                                <i class="fas fa-users fa-3x text-white"></i>
+                            </div>
+                            <h4 class="text-white my-4">Employees</h4>
+                            <div class="counter-counting">
+                                <span class="text-white fs-2 fw-bold" data-toggle="counter-up">25</span>
+                                <span class="h1 fw-bold text-white">+</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-6 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="feature-item p-4">
-                        <div class="feature-icon mb-3"><i class="fas fa-recycle text-white fa-3x"></i></div>
-                        <h3 class="h4 mb-3">Competitive Pricing</h3>
-                        <p class="mb-3">
-                            Enjoy top-quality products at prices that won’t break the bank. We offer competitive rates
-                            without compromising on the excellence of our grills and services.
-                        </p>
-                        <a href="about.html" class="btn text-secondary read-more">Read More <i
-                                class="fa fa-angle-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-6 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="feature-item p-4">
-                        <div class="feature-icon mb-3"><i class="fas fa-microscope text-white fa-3x"></i></div>
-                        <h3 class="h4 mb-3">Proven Track Record</h3>
-                        <p class="mb-3">
-                            With numerous satisfied customers and successful installations, our reputation speaks for
-                            itself. Trust us to deliver the best in invisible grill solutions.
-                        </p>
-                        <a href="about.html" class="btn text-secondary read-more">Read More <i
-                                class="fa fa-angle-right"></i></a>
+                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="counter-item">
+                            <div class="counter-item-icon mx-auto">
+                                <i class="fas fa-heart fa-3x text-white"></i>
+                            </div>
+                            <h4 class="text-white my-4">Years Experience</h4>
+                            <div class="counter-counting">
+                                <span class="text-white fs-2 fw-bold" data-toggle="counter-up">9</span>
+                                <span class="h1 fw-bold text-white">+</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <!-- Fact Counter -->
 
+    <!-- feature Start -->
     <div class="container py-5">
         <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
             <h4 class="fs-2 text-uppercase text-primary">Welcome to I Grill India Private Limited</h4>
@@ -881,7 +943,7 @@
                     </div>
                     <h3 class="h4 mb-3">Competitive Pricing</h3>
                     <p class="mb-3">
-                        Offering premium quality products at highly competitive prices, we ensure that you get the best value for your investment.
+                        We offer top-quality products at affordable prices, ensuring you get great value for your money while meeting your expectations with premium standards and reliability.
                     </p>
                     <a href="about.html" class="btn btn-outline-primary rounded-pill py-2 px-4">Learn More <i class="fa fa-arrow-right ms-2"></i></a>
                 </div>
@@ -892,7 +954,7 @@
                     <div class="feature-icon mb-3">
                         <i class="fas fa-trophy text-white fa-3x p-3 bg-danger rounded-circle"></i>
                     </div>
-                    <h3 class="h4 mb-3">Proven Track Record</h3>
+                    <h3 class="h4 mb-3">Proven Record</h3>
                     <p class="mb-3">
                         With a long list of satisfied clients and successful installations, we have earned a trusted reputation for delivering top-quality invisible grill solutions.
                     </p>
@@ -922,66 +984,16 @@
             z-index: -1;
             filter: blur(5px);
         }
+        .feature-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .feature-item a:hover{
+            color: #fff;
+        }
     </style>
-
-
-
-    <!-- Fact Counter -->
-    <div class="container-fluid counter py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="counter-item">
-                        <div class="counter-item-icon mx-auto">
-                            <i class="fas fa-thumbs-up fa-3x text-white"></i>
-                        </div>
-                        <h4 class="text-white my-4">Happy Clients</h4>
-                        <div class="counter-counting">
-                            <span class="text-white fs-2 fw-bold" data-toggle="counter-up">1142</span>
-                            <span class="h1 fw-bold text-white">+</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="counter-item">
-                        <div class="counter-item-icon mx-auto">
-                            <i class="fas fa-truck fa-3x text-white"></i>
-                        </div>
-                        <h4 class="text-white my-4">Transport</h4>
-                        <div class="counter-counting">
-                            <span class="text-white fs-2 fw-bold" data-toggle="counter-up">513</span>
-                            <span class="h1 fw-bold text-white">+</span>
-                        </div>
-                    </div>
-                </div> -->
-                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="counter-item">
-                        <div class="counter-item-icon mx-auto">
-                            <i class="fas fa-users fa-3x text-white"></i>
-                        </div>
-                        <h4 class="text-white my-4">Employees</h4>
-                        <div class="counter-counting">
-                            <span class="text-white fs-2 fw-bold" data-toggle="counter-up">25</span>
-                            <span class="h1 fw-bold text-white">+</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="counter-item">
-                        <div class="counter-item-icon mx-auto">
-                            <i class="fas fa-heart fa-3x text-white"></i>
-                        </div>
-                        <h4 class="text-white my-4">Years Experience</h4>
-                        <div class="counter-counting">
-                            <span class="text-white fs-2 fw-bold" data-toggle="counter-up">9</span>
-                            <span class="h1 fw-bold text-white">+</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Fact Counter -->
 
     <!-- Service Start -->
     <div class="container-fluid service  overflow-hidden py-5">
