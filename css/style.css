@@ -1283,3 +1283,17 @@ border-bottom: 2px solid #fff;
 .footer-item p{
   color: #fff;
 }
+
+.about-item .read-more-btn {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.about-item .read-more-btn:hover {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
