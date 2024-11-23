@@ -98,7 +98,7 @@ h1,
   font-family:"Chub Gothic";
   font-weight: 500;
   line-height: 1.2;
-  color: #001442;
+  color: #003674;
 }
 h1,
 .h1 {
@@ -2602,8 +2602,8 @@ fieldset:disabled .btn {
 }
 .btn-secondary {
   color: #fff;
-  background-color: #000000;
-  border-color: #000000;
+  background-color: #003674;
+  border-color: #003674;
 }
 .btn-secondary:hover {
   color: #fff;

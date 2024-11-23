@@ -25,6 +25,19 @@
         }
     });
 
+    document.addEventListener("click", function (event) {
+        const navbarCollapse = document.getElementById("navbarCollapse");
+        const isNavbarOpen = navbarCollapse.classList.contains("show"); // Check if navbar is open
+        const isClickInsideNavbar = navbarCollapse.contains(event.target) || event.target.closest('.navbar-toggler');
+
+        if (isNavbarOpen && !isClickInsideNavbar) {
+            // Close the navbar
+            const collapseInstance = bootstrap.Collapse.getInstance(navbarCollapse);
+            collapseInstance.hide();
+        }
+    });
+
+
 
     // testimonial carousel
     $(".testimonial-carousel").owlCarousel({
