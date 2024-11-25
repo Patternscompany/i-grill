@@ -146,7 +146,7 @@
 }
 
 .dropdown .dropdown-menu a:hover {
-  background: var(--bs-primary);
+  background: #003674;
   color: var(--bs-white);
 }
 
