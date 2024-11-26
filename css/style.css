@@ -1471,3 +1471,6 @@ input[type="number"] {
 .btn-close:hover {
   color: #007bff;
 }
+.card-body i{
+  color: #003674;
+}
