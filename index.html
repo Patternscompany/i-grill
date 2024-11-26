@@ -2222,6 +2222,34 @@ With our 100% genuine products, we prioritize your trust. Enjoy a free metal sam
             prevTranslate = 0;
             currentTranslate = 0;
         }
+
+        function calculateFinalPrice(width, height) {
+            if (width <= 0 || height <= 0) {
+                console.error("Invalid input. Width and height must be greater than 0.");
+                return;
+            }
+        
+            // Constants from your data
+            const basePricePerSft = 172.8961; // Price per square foot
+            const margin = 25208.25; // Margin (not displayed, used internally)
+        
+            // Calculate the area
+            const area = width * height;
+        
+            // Calculate the total price (includes margin internally)
+            const basePrice = area * basePricePerSft;
+            const totalPrice = basePrice; // Margin is already accounted in the price per sqft
+        
+            // Log the final amount
+            console.log(`The total price for the given dimensions is: ₹${totalPrice.toFixed(2)}`);
+        }
+        
+        // Example usage
+        const userWidth = 135; // Example width entered by the user
+        const userHeight = 5.4; // Example height entered by the user
+        
+        calculateFinalPrice(userWidth, userHeight);
+        
     </script>
 </body>
 
