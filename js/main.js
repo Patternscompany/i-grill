@@ -199,7 +199,6 @@
             // Display the result
             resultDisplay.style.display = 'block';
             resultDisplay.style.color = 'green';
-            resultDisplay.textContent = `The total price for the given dimensions is: ₹${totalPrice.toFixed(2)}`;
         });
 
 
