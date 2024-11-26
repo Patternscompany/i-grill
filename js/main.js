@@ -155,6 +155,53 @@
         return false;
     });
 
+    const popupContainer = document.getElementById('popupContainer');
+        const openPopupButton = document.querySelector('.btn-open-popup');
+        const closePopupButton = document.getElementById('closePopup');
+        const priceForm = document.getElementById('priceCalculatorForm');
+        const resultDisplay = document.getElementById('resultDisplay');
+
+        // Open popup
+        openPopupButton.addEventListener('click', () => {
+            popupContainer.style.display = 'flex';
+        });
+
+        // Close popup
+        closePopupButton.addEventListener('click', () => {
+            popupContainer.style.display = 'none';
+        });
+
+        // Form submission logic
+        priceForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get user input values
+            const width = parseFloat(document.getElementById('width').value);
+            const height = parseFloat(document.getElementById('height').value);
+            
+            // Validate input
+            if (width <= 0 || height <= 0 || isNaN(width) || isNaN(height)) {
+                resultDisplay.style.display = 'block';
+                resultDisplay.style.color = 'red';
+                resultDisplay.textContent = "Please enter valid dimensions greater than 0.";
+                return;
+            }
+
+            // Constants for calculation
+            const pricePerSft = 172.8961; // Price per square foot
+
+            // Calculate the area
+            const area = width * height;
+
+            // Calculate the final price
+            const totalPrice = area * pricePerSft;
+
+            // Display the result
+            resultDisplay.style.display = 'block';
+            resultDisplay.style.color = 'green';
+            resultDisplay.textContent = `The total price for the given dimensions is: ₹${totalPrice.toFixed(2)}`;
+        });
+
 
 })(jQuery);
 
