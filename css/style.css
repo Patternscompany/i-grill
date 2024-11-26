@@ -200,6 +200,7 @@
 
   .navbar-light .navbar-brand img, .sticky-top.navbar-light .navbar-brand img {
     max-height: 70px;
+    border-radius: 50%;
   }
   .sticky-top.navbar-light .navbar-nav .nav-link:hover,
   .sticky-top.navbar-light .navbar-nav .nav-link.active {
@@ -974,6 +975,15 @@
 .footer .footer-item .footer-btn a:hover i {
   color: var(--bs-primary) !important;
 }
+
+@media (max-width:992px){
+  .footer-item a img{
+    width: 200px !important;
+    height: 200px;
+    object-fit: contain;
+  }
+}
+
 /*** Footer End ***/
 
 /*** copyright Start ***/
@@ -1053,10 +1063,14 @@ border-bottom: 2px solid #fff;
     background-color: transparent;
   }
   .social-icons-container .social-icon{
+    width: 50%;
     border-right: none;
   }
-  .social-icon a i{
-    color: #000000;
+  .social-icons-container .social-icon a i.fa-whatsapp{
+    color: rgb(34, 185, 34);
+  }
+  .social-icons-container .social-icon a i.fa-phone-alt{
+    color: rgb(0, 47, 255);
   }
 }
 .balcony-net-container {
