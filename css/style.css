@@ -992,6 +992,7 @@
 .copyright {
   border-top: 1px solid #fff;
   background: #003674;
+  padding-bottom: 3.6rem !important;
 }
 /*** copyright end ***/
 
@@ -1063,6 +1064,8 @@ border-bottom: 2px solid #fff;
 @media (max-width:992px){
   .social-icons-container{
     background-color: transparent;
+    bottom: 0;
+    left: 0;
   }
   .social-icons-container .social-icon{
     width: 50%;
