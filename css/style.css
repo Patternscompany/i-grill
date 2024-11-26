@@ -1413,6 +1413,17 @@ border-bottom: 2px solid #fff;
   font-size: 16px;
 }
 
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Chrome, Safari, Edge */
+  margin: 0;
+  }
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+  appearance: textfield; /* Standard */
+}
+
 .popup .form-group input:focus {
   outline: none;
   border-color: #007bff;
