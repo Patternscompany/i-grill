@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invisible Grills - Card Layout with Icons</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  .header {
+    text-align: center;
+    background: #4CAF50;
+    color: white;
+    padding: 2rem 1rem;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  .header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    justify-content: center;
+  }
+  
+  .installation-card {
+    background: #fff;
+    width: 300px;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .installation-card h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: #4CAF50;
+  }
+  
+  .installation-card p {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  .installation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .icon {
+    font-size: 3rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333;
+    color: white;
+    margin-top: 2rem;
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+    </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Invisible Grills Installation Guide</h1>
+    <p><i class="fas fa-tools"></i> Step-by-step process for a safe and precise installation.</p>
+  </header>
+
+  <main class="card-container">
+    <div class="installation-card">
+      <i class="fas fa-search-location icon"></i>
+      <h2>1. Site Inspection and Measurement</h2>
+      <p>Inspect the location and take accurate measurements to ensure the grills fit perfectly.</p>
+    </div>
+  
+    <div class="installation-card">
+      <i class="fas fa-toolbox icon"></i>
+      <h2>2. Material Preparation</h2>
+      <p>Choose high-tensile stainless steel cables and prepare necessary hardware like screws, brackets, and anchors.</p>
+    </div>
+  
+    <div class="installation-card">
+      <i class="fas fa-ruler-combined icon"></i>
+      <h2>3. Frame Installation</h2>
+      <p>Mark points, drill holes, and secure frames or mounting brackets to the structure.</p>
+    </div>
+  
+    <div class="installation-card">
+      <i class="fas fa-link icon"></i>
+      <h2>4. Cable Installation</h2>
+      <p>Fix the cables in a uniform pattern, using tensioners to ensure proper alignment.</p>
+    </div>
+  
+    <div class="installation-card">
+        <i class="fas fa-shield-alt icon"></i>
+      <h2>5. Safety Testing</h2>
+      <p>Check the stability and alignment of the cables to ensure durability and functionality.</p>
+    </div>
+  
+    <div class="installation-card">
+      <i class="fas fa-paint-brush icon"></i>
+      <h2>6. Finishing Touches</h2>
+      <p>Trim excess material, cover screws for a neat appearance, and polish the installation.</p>
+    </div>
+  
+    <div class="installation-card">
+      <i class="fas fa-wrench icon"></i>
+      <h2>7. Maintenance</h2>
+      <p>Inspect for damage, replace worn components, and re-tension cables to maintain functionality.</p>
+    </div>
+  </main>
+  
+
+  <footer class="footer">
+    <p>&copy; 2024 I Grill India Private Limited. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+

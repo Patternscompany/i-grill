@@ -195,7 +195,7 @@
 
             // Calculate the final price
             const totalPrice = area * pricePerSft;
-resultDisplay.textContent=totalPrice;
+            resultDisplay.textContent=`₹${totalPrice.toFixed(2)}`;
 
             // Display the result
             resultDisplay.style.display = 'block';
