@@ -195,10 +195,10 @@
 
             // Calculate the final price
             const totalPrice = area * pricePerSft;
+resultDisplay.textContent=totalPrice;
 
             // Display the result
             resultDisplay.style.display = 'block';
-            resultDisplay.style.color = 'green';
         });
 
 

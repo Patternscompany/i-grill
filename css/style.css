@@ -1433,13 +1433,22 @@ input[type="number"] {
 }
 
 .popup .result {
-  margin-bottom: 15px;
+  margin-top: 15px;
   padding: 10px;
   font-size: 18px;
   color: green;
   font-weight: bold;
-  text-align: center;
-  display: none; /* Initially hidden */
+display: inline-flex;
+gap: 0.5rem;
+align-items: center;
+flex-wrap: wrap;
+ 
+}
+.popup #resultDisplay{
+  color: red;
+  margin: 0;
+  padding: 0;
+   display: none; 
 }
 
 .btn-submit {
