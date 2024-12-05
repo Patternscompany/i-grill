@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Cost Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1, h2, h3 {
+            color: #333;
+        }
+        
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Material Cost Calculator</h1>
+        
+        <label for="width">Width (in units):</label>
+        <input type="number" id="width" value="135" onchange="calculate()">
+
+        <label for="height">Height (in units):</label>
+        <input type="number" id="height" value="10" onchange="calculate()">
+
+        <h2>Material Costs</h2>
+        <div id="results">
+            <p>Tracks Price: <span id="tracksPrice">0</span></p>
+            <p>Bolts Price: <span id="boltsPrice">0</span></p>
+            <p>Stiffeners Price: <span id="stiffenersPrice">0</span></p>
+            <p>Miss Material: <span id="missMaterial">500</span></p>
+            <p>Rope Price: <span id="ropePrice">0</span></p>
+            <p>Fitting Price: <span id="fittingPrice">0</span></p>
+            <p>Transport: <span id="transport">1000</span></p>
+
+            <h3>Total: <span id="totalPrice">0</span></h3>
+            <h3>Margin: <span id="margin">0</span></h3>
+            <h3>Final Total: <span id="finalTotal">0</span></h3>
+            <h3>Per SFT: <span id="perSFT">0</span></h3>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('calculatorForm').addEventListener('input', calculate);
+
+        function calculate() {
+          const sqValue = parseFloat(document.getElementById('sqValue').value); // Width in your example
+          const width = parseFloat(document.getElementById('width').value); // Same as sqValue for input
+          const height = parseFloat(document.getElementById('height').value);
+          const pricePerTrack = 1300;
+        
+          // Calculations
+          const tracks = (sqValue / 10) * 2; // Formula for tracks
+          const bolts = tracks * 25; // Bolts
+          const stiffeners = sqValue * 6; // Stiffeners
+          const missMaterial = 500; // Fixed cost
+          const rope = stiffeners * height; // Rope
+          const fitting = sqValue * height; // Fitting
+          const transport = 1000; // Fixed transport cost
+        
+          // Total calculation
+          const total = 
+            tracks * pricePerTrack + 
+            bolts * 15 + 
+            stiffeners * 2 + 
+            missMaterial + 
+            rope * 7 + 
+            fitting * 30 + 
+            transport;
+        
+          const margin = total * 0.25; // 25% margin
+          const finalTotal = total + margin; // Final total
+          const perSft = finalTotal / (sqValue * height); // Per square foot
+        
+          // Display the results
+          document.getElementById('tracks').innerText = tracks.toFixed(4);
+          document.getElementById('bolts').innerText = bolts.toFixed(4);
+          document.getElementById('stiffeners').innerText = stiffeners.toFixed(4);
+          document.getElementById('missMaterial').innerText = missMaterial.toFixed(4);
+          document.getElementById('rope').innerText = rope.toFixed(4);
+          document.getElementById('fitting').innerText = fitting.toFixed(4);
+          document.getElementById('transport').innerText = transport.toFixed(4);
+          document.getElementById('total').innerText = total.toFixed(4);
+          document.getElementById('margin').innerText = margin.toFixed(4);
+          document.getElementById('finalTotal').innerText = finalTotal.toFixed(4);
+          document.getElementById('perSft').innerText = perSft.toFixed(4);
+        }
+        
+        // Initial Calculation
+        calculate();
+        
+    </script>
+</body>
+</html>
