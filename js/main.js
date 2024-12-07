@@ -170,34 +170,54 @@
     popupContainer.style.display = "none"; // Hide the popup
   });
 
-  // Form submission logic
-  priceForm.addEventListener("submit", (event) => {
-    event.preventDefault(); // Prevent form submission
-
-    // Get user input values
+  const calculatorForm = document.getElementById("calculationForm");
+ 
+  function calculate() {
     const width = parseFloat(document.getElementById("width").value);
     const height = parseFloat(document.getElementById("height").value);
 
-    // Validate input
-    if (width <= 0 || height <= 0 || isNaN(width) || isNaN(height)) {
-      resultDisplay.style.display = "block";
-      resultDisplay.style.color = "red";
-      resultDisplay.textContent =
-        "Please enter valid dimensions greater than 0.";
-      return;
-    }
+    // Tracks
+    const tracksValue = (width) / 10 * 2;
+    const tracksPrice = tracksValue * 1300;
 
-    // Constants for calculation
-    const pricePerSft = 172.8961; // Price per square foot
+    // Bolts
+    const boltsValue = tracksValue * 25;
+    const boltsPrice = boltsValue * 15;
 
-    // Calculate the area
-    const area = width * height;
+    // Stiffeners
+    const stiffenersValue = width * 6;
+    const stiffenersPrice = stiffenersValue * 2;
 
-    // Calculate the final price
-    const totalPrice = area * pricePerSft;
-    resultDisplay.textContent = `₹${totalPrice.toFixed(2)}`;
+    // Miss Material
+    const missMaterialValue = 500;
 
-    // Display the result
-    resultDisplay.style.display = "block";
-  });
+    // Rope
+    const ropeValue = stiffenersValue * height;
+    const ropePrice = ropeValue * 7;
+
+    // Fitting
+    const fittingValue = width * height;
+    const fittingPrice = fittingValue * 30;
+
+    // Transport
+    const transportValue = 1000;
+
+    // Total
+    const total = tracksPrice + boltsPrice + stiffenersPrice + missMaterialValue + ropePrice + fittingPrice + transportValue;
+
+    // Margin
+    const margin = total * 0.25;
+
+    // Final Total
+    const finalTotal = total + margin;
+
+    // Per SFT
+    const perSft = finalTotal / (width * height);
+
+    document.getElementById("total").value = total.toFixed(2);
+    document.getElementById("margin").value = margin.toFixed(2);
+    document.getElementById("finalTotal").value = finalTotal.toFixed(2);
+    document.getElementById("perSft").value = perSft.toFixed(4);
+}
+
 })(jQuery);

@@ -223,31 +223,79 @@
       <div class="popup">
         <button class="btn-close" id="closePopup">&times;</button>
         <h2>Price Calculator</h2>
-        <div class="result" id="resultDisplay"></div>
-        <!-- Area to display the result -->
-        <form id="priceCalculatorForm">
-          <div class="form-group">
-            <label for="width">Width (in feet):</label>
-            <input
-              type="number"
-              id="width"
-              name="width"
-              placeholder="Enter width"
-              required
-            />
+        <form id="calculationForm">
+          <div>
+              <!-- <label for="width">Tracks:</label> -->
+              <div>
+                  <label for="width">Width:</label><br>
+                  <input type="number" id="width" value="135">
+              </div>
+              <div>
+                  <label for="height">Height:</label>
+                  <input type="number" id="height" value="5.4">
+              </div>
           </div>
-          <div class="form-group">
-            <label for="height">Height (in feet):</label>
-            <input
-              type="number"
-              id="height"
-              name="height"
-              placeholder="Enter height"
-              required
-            />
+      
+          <div class="d-none">
+              <label for="boltsValue">Bolts:</label>
+              <input type="text" id="boltsValue" readonly>
+              <input type="text" id="boltsPrice" readonly>
           </div>
-          <button type="submit" class="btn-submit">Calculate Price</button>
-        </form>
+      
+          <div class="d-none">
+              <label for="stiffenersValue">Stiffeners:</label>
+              <input type="text" id="stiffenersValue" readonly>
+              <input type="text" id="stiffenersPrice" readonly>
+          </div>
+      
+          <div class="d-none">
+              <label for="missMaterialValue">Miss Material:</label>
+              <input type="text" value="500" id="missMaterialValue" readonly>
+              <input type="text" id="missMaterialPrice" readonly>
+          </div>
+      
+          <div class="d-none">
+              <label for="ropeValue">Rope:</label>
+              <input type="text" id="ropeValue" readonly>
+              <input type="text" id="ropePrice" readonly>
+          </div>
+      
+          <div class="d-none">
+              <label for="fittingValue">Fitting:</label>
+              <input type="text" id="fittingValue" readonly>
+              <input type="text" id="fittingPrice" readonly>
+          </div>
+      
+          <div class="d-none">
+              <label for="transportValue">Transport:</label>
+              <input type="text" value="1000" id="transportValue" readonly>
+              <input type="text" id="transportPrice" readonly>
+          </div>
+      
+          <div class="d-none">
+              <label for="total">Total:</label>
+              <input type="text" id="total" readonly>
+          </div>
+      
+          <div class="d-none">
+              <label for="margin">Margin:</label>
+              <input type="text" id="margin" readonly>
+          </div>
+      
+          <div>
+              <label for="finalTotal">Final Total:</label>
+              <input type="text" id="finalTotal" readonly>
+          </div>
+      
+          <div>
+              <label for="perSft">Per SFT:</label>
+              <input type="text" id="perSft" readonly>
+          </div>
+      
+          <div class="center">
+              <button class="btn-submit" type="button" onclick="calculate()">Calculate</button>
+          </div>
+      </form>
       </div>
     </div>
 
@@ -1016,6 +1064,53 @@
           });
         });
       });
+      function calculate() {
+        const width = parseFloat(document.getElementById("width").value);
+        const height = parseFloat(document.getElementById("height").value);
+    
+        // Tracks
+        const tracksValue = (width) / 10 * 2;
+        const tracksPrice = tracksValue * 1300;
+    
+        // Bolts
+        const boltsValue = tracksValue * 25;
+        const boltsPrice = boltsValue * 15;
+    
+        // Stiffeners
+        const stiffenersValue = width * 6;
+        const stiffenersPrice = stiffenersValue * 2;
+    
+        // Miss Material
+        const missMaterialValue = 500;
+    
+        // Rope
+        const ropeValue = stiffenersValue * height;
+        const ropePrice = ropeValue * 7;
+    
+        // Fitting
+        const fittingValue = width * height;
+        const fittingPrice = fittingValue * 30;
+    
+        // Transport
+        const transportValue = 1000;
+    
+        // Total
+        const total = tracksPrice + boltsPrice + stiffenersPrice + missMaterialValue + ropePrice + fittingPrice + transportValue;
+    
+        // Margin
+        const margin = total * 0.25;
+    
+        // Final Total
+        const finalTotal = total + margin;
+    
+        // Per SFT
+        const perSft = finalTotal / (width * height);
+    
+        document.getElementById("total").value = total.toFixed(2);
+        document.getElementById("margin").value = margin.toFixed(2);
+        document.getElementById("finalTotal").value = finalTotal.toFixed(2);
+        document.getElementById("perSft").value = perSft.toFixed(4);
+    }
     </script>
   </body>
 </html>
