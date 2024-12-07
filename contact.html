@@ -48,7 +48,7 @@
             <div class="row">
                 <div class="col-md-6 col-12 col-lg-6 call">
                     <a href="tel:+919966836868">
-                        <p> <i class="fa fa-phone-alt"></i>+919966836868</p>
+                        <p> <i class="fa fa-phone"></i>+919966836868</p>
                     </a>
                     <a href="mailto:igrillindia@gmail.com">
                         <p> <i class="fas fa-envelope me-2"></i>igrillindia@gmail.com</p>
@@ -194,7 +194,7 @@
             </div> -->
             <div class="social-icon">
                 <a href="tel:+919966836868" target="_blank">
-                    <i class="fa fa-phone-alt"></i>
+                    <i class="fa fa-phone"></i>
                 </a>
             </div>
         </div>
@@ -295,7 +295,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 h-100 wow fadeInUp" data-wow-delay="0.2s">
-                    <!-- <form id="contactForm">
+                    <form id="contactForm">
                         <div class="row g-4">
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
@@ -334,8 +334,33 @@
                                     Message</button>
                             </div>
                         </div>
-                    </form> -->
-                    <form method="post" action="//submit.form" onSubmit="return validateForm();">
+                    </form>
+                    <script>
+                        document.getElementById('sendButton').addEventListener('click', function () {
+                            // Capture form data
+                            const name = document.getElementById('name').value;
+                            const email = document.getElementById('email').value;
+                            const phone = document.getElementById('phone').value;
+                            const subject = document.getElementById('subject').value;
+                            const message = document.getElementById('message').value;
+                    
+                            // Format the message for WhatsApp
+                            const whatsappMessage = `Hello!%0A%0AHere are the details submitted:%0A%0A` +
+                                `*Name:* ${name}%0A` +
+                                `*Email:* ${email}%0A` +
+                                `*Phone:* ${phone}%0A` +
+                                `*Subject:* ${subject}%0A` +
+                                `*Message:* ${message}`;
+                    
+                            // WhatsApp URL (change the phone number to your desired recipient)
+                            const whatsappURL = `https://wa.me/+919966836868?text=${whatsappMessage}`;
+                    
+                            // Open WhatsApp
+                            window.open(whatsappURL, '_blank');
+                        });
+                    </script>
+                    
+                    <!-- <form method="post" action="//submit.form" onSubmit="return validateForm();">
                        
                         <div style="padding-bottom: 18px;">Name<span style="color: red;"> *</span><br/>
                         <input type="text" id="data_1" name="data_1" class="form-control"/>
@@ -385,7 +410,7 @@
                         var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
                         return isEmpty(email) || re.test(email);
                         }
-                        </script>
+                        </script> -->
 
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
@@ -417,7 +442,7 @@
                         </div>
                         <div class="col-lg-12">
                             <div class="d-inline-flex rounded bg-white w-100 p-4">
-                                <i class="fa fa-phone-alt fa-2x text-secondary me-4"></i>
+                                <i class="fa fa-phone fa-2x text-secondary me-4"></i>
                                 <div>
                                     <h4>Telephone</h4>
                                     <a href="tel:+919966836868">
@@ -507,7 +532,7 @@
                         <a href="mailto:igrillindia@gmail.com"><i class="fas fa-envelope me-2"></i>
                             igrillindia@gmail.com</a>
                         <!-- <a href="mailto:igrillindia@gmail.com"><i class="fas fa-envelope me-2"></i> igrillindia@gmail.com</a> -->
-                        <a href="tel:+919966836868"><i class="fa fa-phone-alt me-2"></i> +919966836868</a>
+                        <a href="tel:+919966836868"><i class="fa fa-phone me-2"></i> +919966836868</a>
                     </div>
                 </div>
             </div>
