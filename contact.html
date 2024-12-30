@@ -72,7 +72,7 @@
                       <a href=""><i
                               class="fab fa-linkedin-in"></i></a>
                     </li>
-                    <li><a href="https://youtube.com/@igrill_india?si=-Xuw_zwIwinheOuY"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://youtube.com/@igrill_india"><i class="fab fa-youtube"></i></a></li>
                     <li><a href="https://www.pinterest.com/igrillindia/"><i class="fab fa-pinterest"></i></a></li>
                     </ul>
                 </div>
@@ -299,26 +299,26 @@
                         <div class="row g-4">
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control border-0" id="name" placeholder="Your Name">
+                                    <input type="text" class="form-control border-0" id="name" placeholder="Your Name" required>
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
                                     <input type="email" class="form-control border-0" id="email"
-                                        placeholder="Your Email">
+                                        placeholder="Your Email" required>
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
-                                    <input type="phone" class="form-control border-0" id="phone" placeholder="Phone">
+                                    <input type="phone" class="form-control border-0" id="phone" placeholder="Phone" required>
                                     <label for="phone">Your Phone</label>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control border-0" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control border-0" id="subject" placeholder="Subject" required>
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
@@ -338,11 +338,32 @@
                     <script>
                         document.getElementById('sendButton').addEventListener('click', function () {
                             // Capture form data
-                            const name = document.getElementById('name').value;
-                            const email = document.getElementById('email').value;
-                            const phone = document.getElementById('phone').value;
-                            const subject = document.getElementById('subject').value;
-                            const message = document.getElementById('message').value;
+                            const name = document.getElementById('name').value.trim();
+                            const email = document.getElementById('email').value.trim();
+                            const phone = document.getElementById('phone').value.trim();
+                            const subject = document.getElementById('subject').value.trim();
+                            const message = document.getElementById('message').value.trim();
+                    
+                            // Form validation
+                            if (!name) {
+                                alert('Name is required.');
+                                return;
+                            }
+                    
+                            if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+                                alert('A valid email address is required.');
+                                return;
+                            }
+                    
+                            if (!phone || !/^\d{10}$/.test(phone)) {
+                                alert('A valid 10-digit phone number is required.');
+                                return;
+                            }
+                    
+                            if (!subject) {
+                                alert('Subject is required.');
+                                return;
+                            }
                     
                             // Format the message for WhatsApp
                             const whatsappMessage = `Hello!%0A%0AHere are the details submitted:%0A%0A` +
@@ -359,6 +380,7 @@
                             window.open(whatsappURL, '_blank');
                         });
                     </script>
+                    
                     
                     <!-- <form method="post" action="//submit.form" onSubmit="return validateForm();">
                        
@@ -496,7 +518,7 @@
                                     class="fab fa-x-twitter"></i></a>
                         <a class="btn btn-secondary btn-md-square rounded-circle me-0" href=""><i
                                 class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-secondary btn-md-square rounded-circle me-0" href="https://youtube.com/@igrill_india?si=-Xuw_zwIwinheOuY"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-secondary btn-md-square rounded-circle me-0" href="https://youtube.com/@igrill_india"><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-secondary btn-md-square rounded-circle me-0" href="https://www.pinterest.com/igrillindia/"><i class="fab fa-pinterest"></i></a>
                         
                         </div>

@@ -1,6 +1,8 @@
 /*** Spinner Start ***/
 /*** Spinner ***/
-
+body{
+  letter-spacing: .1em;
+}
 #spinner {
   opacity: 0;
   visibility: hidden;
