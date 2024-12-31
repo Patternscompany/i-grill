@@ -795,6 +795,10 @@ body{
 .team .team-item .team-inner .team-img img {
   height: 350px;
 }
+.team-video video{
+  height: 390px;
+  width: 100%;
+}
 /* .team .team-item .team-inner .team-img::after {
   content: "";
   width: 100%;
